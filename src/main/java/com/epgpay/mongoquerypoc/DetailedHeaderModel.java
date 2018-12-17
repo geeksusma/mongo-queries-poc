@@ -20,14 +20,14 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @AllArgsConstructor
 @Document(collection = "headers")
 @EqualsAndHashCode(of = "id")
-class HeaderModel {
+class DetailedHeaderModel {
 
     @Id
     @Field("id")
     private String id;
 
-    @Field("customer_id")
-    private Long customerId;
+    @Field("customer")
+    private CustomerModel customer;
 
     @Field("status")
     private HeaderStatus status;
@@ -44,5 +44,4 @@ class HeaderModel {
 
     @Field("code")
     private String code;
-
 }
